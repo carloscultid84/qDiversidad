@@ -1,0 +1,1161 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-store">
+
+        <title>NICHO - SPECIES</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+        <!--<link rel="stylesheet" href="javascripts/leaflet/leaflet.css" />--> 
+        <!--<link rel="stylesheet" href="plugins/sidebar/css/leaflet-sidebar.css" />-->
+
+
+        <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
+
+        <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+
+        <link rel="stylesheet" href="stylesheets/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/toastr.css">
+        <!-- <link rel="stylesheet" href="plugins/sidebar/css/leaflet-sidebar.css" /> -->
+
+        <!-- En servidor -->
+        <link rel="stylesheet" type="text/css" href="stylesheets/geoportal.css">
+
+        <!-- En servidor -->
+        <link rel="stylesheet" href="plugins/jstree/dist/themes/proton/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+
+
+        <link rel="stylesheet" href="plugins/easybutton/src/easy-button.css">
+        <link rel="stylesheet" href="plugins/markercluster/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="plugins/markercluster/dist/MarkerCluster.Default.css" />
+        <!-- <link rel="stylesheet" href="plugins/markercluster/dist/screen.css" /> -->
+
+
+        <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="plugins/popupSlider/popup-slider.css">
+
+
+        <!--<link href="plugins/searchbox/searchbox.min.css" rel="stylesheet" />-->
+
+        <link href="plugins/ptjs/css/ptjs.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="plugins/ptjs/themes/classic.min.css">
+
+        <link rel="stylesheet" type="text/css" href="plugins/fullpage/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/loading/jquery.loading.min.css" />
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway:500" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="plugins/multiselect/css/bootstrap-multiselect.css" type="text/css"/>
+
+
+
+
+
+
+
+        <!-- <link rel="stylesheet" href="bs_css/animate.css" />
+        <link rel="stylesheet" href="bs_css/bootstrap.css" />
+        <link rel="stylesheet" href="bs_css/et-line-icons.css" />
+        <link rel="stylesheet" href="bs_css/font-awesome.min.css" />
+        <link rel="stylesheet" href="bs_css/extralayers.css" />
+        <link rel="stylesheet" href="bs_css/settings.css" />
+        <link rel="stylesheet" href="bs_css/magnific-popup.css" />
+        <link rel="stylesheet" href="bs_css/owl.carousel.css" />
+        <link rel="stylesheet" href="bs_css/owl.transitions.css" />
+        <link rel="stylesheet" href="bs_css/full-slider.css" />
+        <link rel="stylesheet" href="bs_css/text-effect.css" />
+        <link rel="stylesheet" href="bs_css/menu-hamburger.css" />
+        <link rel="stylesheet" href="bs_css/style.css" />
+        <link rel="stylesheet" href="bs_css/responsive.css" /> -->
+        <!--[if IE]>
+            <link rel="stylesheet" href="bs_css/style-ie.css" />
+        <![endif]-->
+        <!--[if IE]>
+            <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+
+
+
+
+        <style>
+            body {
+                /*padding: 0;
+                margin: 0;*/
+            }
+
+            html, body, #map {
+                height: 95%;
+                /*font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+            }
+            .dataTables_scrollHead {
+              overflow: unset !important;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+
+        <!--<script type="text/javascript" src="plugins/jsonc/jsonc.min.js"></script>-->
+
+        <script type="text/javascript" src="plugins/router/cbsplit.js"></script>
+        <script type="text/javascript" src="plugins/router/jquery.ba-hashchange.js"></script>
+        <script type="text/javascript" src="plugins/router/jquery.router.js"></script>
+
+
+        <!--<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>-->
+        <!-- // <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+
+        <script src="plugins/jquery-ui/jquery-ui.js"></script>
+
+        <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+
+        <script src="plugins/d3-tip/index.js"></script>
+        <!-- // <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> -->
+
+
+        <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+        <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+        <script src="//cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+        <script src="//cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+        <script src="//cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+        <script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+        <script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+
+
+        <!--<script type="text/javascript" src="examples.js"></script>-->
+
+
+
+
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-83773501-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+
+        <script type="text/javascript">
+
+            // variable sglobal para la configuración y regeneración del enlace
+            var _json_config;
+
+
+            $(function () {
+
+                var result = $('#result');
+
+                // Print a hash
+                $.print = function (dict) {
+
+                    return JSON.stringify(dict);
+
+                }
+
+                // Setup routes
+                result.route('link/', function (request) {
+                    return $.print(request.params);
+                });
+
+                var hash = location.hash.replace(/^#/, '');
+//                console.log(hash);
+
+                if (hash) {
+
+//                    console.log("enlace");
+                    var match = $.routeMatches(hash);
+
+//                    console.log(match);
+
+                    if (match) {
+                        var template = $(match.route.template);
+
+                        if (template.length) {
+                            var text = match.route.callback.apply(match.route.callback, match.args);
+                            // template.text(text);
+                            // console.log(template);
+                            _json_config = JSON.parse(text)
+
+
+                        }
+
+                    }
+
+
+
+                } else {
+//                    console.log("inicio");
+                }
+
+            })
+
+
+
+        </script>
+<script>
+  // Initialize tooltip component
+  $(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // Initialize popover component
+  $(function() {
+    $('[data-toggle="popover"]').popover()
+  })
+</script>
+
+
+        <!--Plugins-->
+
+        <!-- <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' /> -->
+        <!-- <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' /> -->
+
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> -->
+
+    </head>
+    <body>
+
+
+        <div id="main_container" class="container-fluid docScroller">
+
+            <header id="main-header">
+
+                <div class="row">
+
+                    <!--Agregar biblioteca de boostrap de pagina modelo-->
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <span id="lb_titulo" class="site-name"></span>
+                        <span id="lb_sub_titulo" class="site-desc"></span>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+
+                        <div class="col-md-9 col-sm-12 col-xs-12 margin-top-15 ">
+                            <button id="btn_tuto_steps" type="button" title="" class="btn btn-warning  display-marker "></button>
+                            <button id="btn_tutorial" type="button" title="" class="btn btn-warning "></button>
+                            <button id="nicho_link" type="button" class="btn btn-primary "></button>
+                            <button id="tuto_res" class="btn btn-warning display-marker" type="button" 
+                                    style="visibility: hidden"
+                                    ></button>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12 col-xs-12 margin-top-15 ">
+                            <div class="language_drop ">
+
+                                <div class=" dropdown_group ">
+
+                                    <div class="input-group-btn ">
+
+                                        <button id="btn_idioma" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="en_EN" >Language <span class="caret"></span></button>
+
+                                        <ul class="dropdown-menu dropdown_idioma">
+                                            <li><a id="a_espanol" class="idioma " value="es_ES" label="Español ">Español </a></li>
+                                            <li><a id="a_ingles" class="idioma" value="en_EN" label="Ingles ">Ingles </a></li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!--                <div class="">
+                                    <button id="tutorial" type="button" class="btn btn-light"></button>
+                                </div>-->
+
+            </header>
+
+
+            <!-- <section> -->
+
+            <div id="section0" class="row-fluid row_panel margin-top-10 section page">
+
+                <div class="col-md-5 margin-top-30 padding-sides-zero">
+
+                    <div id="sp_section" class="col-md-12 margin-top-15 box_shadow height95 display-marker">
+
+                        <h2 id="lb_especie" class="sidebar-header-species no-mg-top"></h2>
+
+                        <!-- No eliminar, utilizado para enlace de regeneración! -->
+                        <div id="result"></div>
+
+                        <div class="row ">
+                            
+                            <div id="tuto_region"  class="col-md-6 col-sm-12 col-xs-12">
+                                <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+                                    <label id="footprint_region" ></label>
+                                    <select id="footprint_region_select" class="form-control" >
+                                    </select>
+                                <!--</div>-->
+                            </div>
+
+                            <div id="tuto_resolution"  class="col-md-6 col-sm-12 col-xs-12">
+
+                                <div class="form-group">
+                                    <label id="lb_mapa_res" for="grid_resolution"></label>
+                                    <select class="form-control" id="grid_resolution">
+                                        <option value="8">8 km</option>
+                                        <option selected="selected" value="16">16 km</option>
+                                        <option value="32">32 km</option>
+                                        <option value="64">64 km</option>
+                                    </select>
+                                </div> 
+
+                            </div>
+                            
+                        </div>
+
+                        <div id="var_target" class="row ">
+
+                            <!-- <div class="col-md-9 col-sm-12 col-xs-12 pd-no-rside">
+
+                                <label id="lb_sp_list"></label>
+
+                                <div id="tuto_taxon_sp_target" class="input-group dropdown_group">
+                                    <div class="input-group-btn">
+                                        <button id="btn_variable_target" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">Taxon <span class="caret"></span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <li>
+                                                <a id="a_item_reino_target" parent-field="reinovalido" data-field="phylumdivisionvalido" level-field="2" class="biotica">Kingdom</a>
+                                            </li>
+                                            <li>
+                                                <a id="a_item_phylum_target" parent-field="phylumdivisionvalido" data-field="clasevalida" level-field="3" class="biotica">Phylum</a>
+                                            </li>
+                                            <li>
+                                                <a id="a_item_clase_target" parent-field="clasevalida" data-field="ordenvalido" level-field="4" class="biotica">Class</a>
+                                            </li>
+                                            <li>
+                                                <a id="a_item_orden_target" parent-field="ordenvalido" data-field="familiavalida" level-field="5" class="biotica">Order</a>
+                                            </li>
+                                            <li><a id="a_item_familia_target" parent-field="familiavalida" data-field="generovalido" level-field="6" class="biotica">Family</a></li>
+                                            <li>
+                                                <a id="a_item_genero_target" parent-field="generovalido" data-field="especievalidabusqueda" level-field="7" class="biotica">Genus</a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <input id="text_variable_target" type="text" aria-label="..." disabled="" class="form-control ui-autocomplete-input" autocomplete="off">
+                                </div>
+
+                                <div id="spContainer" class="col-xs-12 pd-no-sides">
+                                </div>
+
+                                comentado
+                                 <div class="col-md-10 col-sm-10 col-xs-10 pd-no-sides">
+                                    <div id="tuto_autocomplete" class="input-group text-input ">
+                                            <input id="nom_sp" type="text" class="form-control " />    
+                                            <span id="lb_example" class="input-group-addon" id="basic-addon1">
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-2 pd-no-sides">
+                                    <input id="btnSchSp" class="btn btn-primary" type="button" />
+                                </div>
+                                
+                                
+
+                                <div class="col-xs-12 pd-no-sides">
+                                         <select id="nom_sp_multiple" multiple="multiple " class="col-xs-12" ></select>   
+
+                                </div>
+
+                                <div id="spContainer" class="col-xs-12 pd-no-sides">
+                                </div> 
+                                comentado
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-12 col-xs-12 pd-no-lside">
+
+                                <div id="spRigthContainer" class="pd-no-sides">
+
+                                </div>
+                                
+                            </div> -->
+
+                        </div>
+                        
+                        
+
+                        <div class="row ">
+
+
+                            <div id="tuto_fil_fecha" class="col-md-5 col-sm-12 col-xs-12">
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <label id="lb_range_fecha" for="sliderFecha"></label>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="slider_item_fecha" id="sliderFecha"></div>
+                                    <label class="label_item" id="labelFecha" type="label"></label>
+                                </div>
+
+                            </div>
+
+                            <div id="tuto_reg_fecha" class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <label id="lb_reg_fecha" for="chkFecha"></label>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="chkFecha" class="checkbox_item" type="checkbox" checked/>
+                                    <label class="label_item" id="lb_sfecha" type="label"></label>
+                                </div>
+
+                            </div>
+
+                            <div id="tuto_reg_fosil" class="col-md-3 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <label id="lb_fosil" for="chkFosil"></label>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input id="chkFosil" class="checkbox_item" type="checkbox" checked/>
+                                    <label class="label_item" id="labelFosil" type="label" ></label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="row ">
+
+                            <div id="tuto_histo_reg" class="col-md-12">
+                                <div id="hist_fecha_container" class="fecha_container">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-12  margin-top-five">
+                                <button id="reload_map" class="btn btn-primary pull-right" type="button"></button>
+                            </div>
+
+
+                            <button id="specie_next" class="btn btn-success btn-sig " type="button" 
+                                    style="visibility: hidden"
+                                    >Siguiente</button>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-7 margin-top-15 ">
+
+                    <div id="tuto_mapa_occ" class="col-md-12 margin-top-15 padding-sides-zero ">
+
+                        <div id="mapwrap" class="margin-top-15">
+
+                            <div id="toolbar">
+                                <div class="hamburger">
+                                    <span id="tlt_resumen">Resumen</span>
+                                </div>
+                                <div id="tourstops">
+                                    <h2 id="hd_resumen">Resumen</h2>
+
+                                    <div id="tab_res" class="tab-pane active">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+
+                                                <!-- <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_especie" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_especie_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div> -->
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_occ" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="num_occ" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_occ_celda" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="num_occ_celda" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <!-- <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_reino" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_reino_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_phylum" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_phylum_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_clase" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_clase_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_orden" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_orden_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_familia" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_familia_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div> -->
+
+
+
+                                                <!-- <div class="row">
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_genero" class="summary_lb"></h5>
+                                                    </div>
+                                                    <div class="col-md-6 margin-top-five">
+                                                        <h5 id="lb_sum_genero_res" class="summary_lb">-</h5>
+                                                    </div>
+                                                </div> -->
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="map2" class="  box_shadow "></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="section1" class="row-fluid margin-top-15 section page" >
+                
+                <div id="tuto_variables" class="col-md-9 margin-top-15 " style="padding-left: 0px">
+
+                    <div class="col-md-12 box_shadow padding-sides-zero height85" id="variables"></div>
+
+                </div>
+
+
+                <div id="tuto_params" class="col-md-3 margin-top-15 box_shadow height85 padding-sides-zero">
+
+                    <div class="col-md-12 ">
+
+                        <h2 id="lb_params_variables" class="sidebar-header-species">Parámetros</h2>
+
+                        <div id="tuto_val" class="row">
+
+                            <div class="col-md-6 margin-top-five">
+                                <h5 id="lb_validacion"></h5>
+                            </div>
+                            <div class="col-md-6 margin-top-five ">
+                                <input id="chkValidation" class="checkbox_item pull-right" type="checkbox"/>
+                                <label class="label_item pull-right" id="labelValidation" type="label"></label>
+                            </div>
+                        </div>
+
+                        <div id="tuto_min_occ" class="row">
+                            <div class="col-md-6 margin-top-five">
+                                <h5 id="lb_occ_min"></h5>
+                            </div>
+                            <div class="col-md-6 margin-top-five">
+                                <input id="chkMinOcc" class="checkbox_item pull-right" type="checkbox" checked="true"/>
+                                <input id="occ_number" class="occ_number pull-right " type="number" min="1" value="5">
+                            </div>
+                        </div>
+
+                        <div id="tuto_apriori" class="row">
+                            <div class="col-md-6 margin-top-five">
+                                <h5 id="lb_apriori"></h5>
+                            </div>
+                            <div class="col-md-6 margin-top-five">
+                                <input id="chkApriori" class="checkbox_item pull-right" type="checkbox" />
+                                <label class="label_item pull-right" id="lb_do_apriori" type="label"></label>
+                            </div>
+                        </div>
+
+                        <div id="tuto_map_prob" class="row">
+                            <div class="col-md-6 margin-top-five">
+                                <h5 id="lb_mapprob"></h5>
+                            </div>
+                            <div class="col-md-6 margin-top-five">
+                                <input id="chkMapaProb" class="checkbox_item pull-right" type="checkbox" />
+                                <label class="label_item pull-right" id="lb_mapa_prob" type="label"></label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                
+
+                <div id="tuto_correr_analisis" class="col-md-12 margin-top-15 ">
+
+                    <div class=" col-md-5 col-centered " >
+
+                        <!--<div class="col-md-12 margin-top-15">-->
+                        <button id="get_esc_ep" class="btn btn-primary " type="button" ></button>
+                        <button id="show_gen" class="btn btn-primary margin-left-two" 
+                                type="button" title="" 
+                                style="visibility: hidden" 
+                                ></button>                        
+                        <button id="btn_tuto_steps_result" type="button" title="" class="btn btn-warning  display-marker " style="visibility: hidden" ></button>
+
+                    </div>
+
+
+                </div>
+
+
+                <button id="params_next" class="btn btn-success btn-sig-left" type="button" 
+                        style="visibility: hidden"
+                        ></button>
+                <!---->
+
+            </div>
+
+
+
+            <div id="section2" class="row-fluid margin-top-35 section page">
+
+                <div class="col-md-12 margin-top-15">
+
+                    <div class="row">
+
+                        <div class="col-lg-1">
+                            <h3 id="lb_resultados" class="sidebar-header-species"></h3>    
+                        </div>
+
+                        <div class="col-lg-1 margin-top-20 margin-right-90  pull-right">
+                            <div class=" dropdown_group ">
+
+                            <div class="input-group-btn ">
+
+                                <button id="btn_map_type" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="deviation" >Standard deviation <span class="caret"></span></button>
+
+                                <ul class="dropdown-menu dropdown_idioma">
+                                    <li><a class="map_type" label="Equal range" value="range">Equal range </a></li>
+                                    <li><a class="map_type" label="Standard deviation" value="deviation" ">Standard deviation </a></li>
+                                    <li><a class="map_type" label="Natural Breaks" value="jenks" ">Natural Breaks </a></li>
+                                    <!-- <li><a class="map_type" label="Quantize" value="quantize">Quantize </a></li> -->
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                        </div>
+
+                        
+
+
+                    
+
+
+                    
+
+
+                    <div id="map" class="margin-top-15 box_shadow" >
+
+
+                        <!-- <div class="dropdown show link_map_type">
+                          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown link
+                          </a>
+
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div> -->
+
+                       <!--  <div class="dropdown link_map_type">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Visualización
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div> -->
+
+
+                        
+
+                        <!-- <div id='form' class="link_map_type">
+                          <input checked='true' type='radio' name='scale' id='jenks9' /><label for='jenks9'>jenks 9</label>
+                          <input type='radio' name='scale' id='quantize' /><label for='quantize'>quantize</label>
+                        </div> -->
+
+                        <div class="link_shape">
+                            <button id="dShape" type="button" title="Descarga mapa (.shp)" class="btn btn-primary glyphicon glyphicon-download-alt" data-toggle="modal" data-target="#modalMailShape"></button>
+                        </div>
+
+                        <div id="escala_color" class="link_shape pull-right">					
+                        </div>				
+
+                    </div>
+                </div>
+
+                <!--<div class="col-md-12 margin-top-15">-->
+
+                <!--</div>-->
+
+
+            </div>
+
+            <button id="map_next" class="btn btn-success btn-sig" type="button" 
+                    style="visibility: hidden"
+                    ></button>
+            <!---->
+
+
+            <div class="row-fluid row_panel margin-top-35 section page" id="tbl_hist" > 
+
+                <div class="col-md-12 margin-top-15">
+
+                    <div id="myScrollableBlockEpsilonDecil" class="row-fluid myScrollableBlockEpsilonDecil margin-top-15 box_shadow bg-card">
+                        
+                        <button id="btn_msg_hist_decil" type='button' class='btn btn-light glyphicon glyphicon-info-sign btn_column_hist pull-right' onclick="$('#modalInfo').modal()" >
+                        </button>
+
+                        <div id="chartdiv_score_decil"></div>	
+                    </div>
+
+                    <div id="div_example" class="row-fluid myScrollableBlockDecilList box_shadow bg-card">
+
+                        <table id="example" class="display compact cell-border" cellspacing="0"></table>
+
+                    </div>
+
+
+                    <button id="hist_next" class="btn btn-success btn-sig-rigth" type="button" 
+                            style="visibility: hidden"
+                            ></button>
+                    <!--style="visibility: hidden"-->
+
+
+                    <div id="histcontainer_row" class="row-fluid histcontainer_row  ">
+
+                        <div id="hst_esp_eps" class="myScrollableBlockEpsilonSmallHist col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-card">
+                            <button type='button' class='btn btn-light glyphicon glyphicon-info-sign btn_column_hist pull-right' 
+                            title="Histograma Epsilon Especie" data-trigger="hover" data-placement="auto" data-container="body" data-toggle="popover" data-content="Muestra la frecuencia por rango donde estan las especies por su valor de epsilon."></button>
+
+                            <div id="chartdiv_epsilon"></div>	
+                        </div>
+
+                        <div id="hst_esp_scr" class="myScrollableBlockEpsilonSmallHist col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-card">
+                            <button type='button' class='btn btn-light glyphicon glyphicon-info-sign btn_column_hist pull-right'
+                              title="Histograma Score Especie" data-trigger="hover" data-placement="auto" data-container="body" data-toggle="popover" data-content="Muestra la frecuencia por rango donde estan las especies por su valor de score."></button>
+
+                            <div id="chartdiv_score"></div>	
+                        </div>	
+                        <div id="hst_cld_scr" class="myScrollableBlockEpsilonSmallHist col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-card">
+                            <button type='button' class='btn btn-light glyphicon glyphicon-info-sign btn_column_hist pull-right'
+                              title="Histograma Score Celda" data-trigger="hover" data-placement="auto" data-container="body" data-toggle="popover" data-content="Muestra la frecuencia por rango donde estan las celdas por su valor de score."></button>
+
+                            <div id="chartdiv_score_celda"></div>	
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div id="treeAddedPanel"  class="row-fluid myScrollableBlockDecilList box_shadow bg-card">
+                        <table id="tdisplay" class="display compact cell-border" ></table>
+                    </div>
+
+
+                </div>	
+
+
+            </div>
+
+
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade mymodals" id="modalMail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 id="lb_modal_csv" class="modal-title" id="myModalLabel"></h4>
+
+                    </div>
+
+
+                    <div id="" class="modal-body">
+
+                        <h5 id="lb_des_modal_csv"></h5>
+
+                        <br/>
+
+                        <div class="input-group emial_component">
+
+                            <input id="email_address" type="email" class="custom_form_control" placeholder="Correo" required>
+                            <span class="input-group-btn">
+                                <button id="send_email_csv" class="btn btn-primary" type="button"></button>
+                            </span>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                        <button id="cancel_email_csv" type="button" class="btn btn-primary" data-dismiss="modal"></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="modal fade mymodals" id="modalMailShape" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4  id="lb_modal_shp" class="modal-title" ></h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <h5 id="lb_des_modal_shp"></h5>
+                        <br/>
+                        <a id="map_download" href="#" download="map.geojson"></a>
+                        <br/>
+                        <a id="sp_download" href="#" download="specie.geojson">Descarga</a>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="cancel_email_shp" type="button" class="btn btn-primary" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade mymodals_info" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4  id="lb_header_info" class="modal-title" ></h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <p id="lb_body_info"></p>
+                        <div id="div_formula" class="div_formula">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade mymodals_info" id="modalRegenera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content" style="height: 200px;">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4  id="lb_header_carga" class="modal-title" >Regenerar resultados</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+
+                        <div class="form-group">
+                            <label for="usr">Para regenerar tus resultados copia el siguiente enlace y pegalo en tu explorador:</label>
+                            <input type="text" class="form-control" id="lb_enlace" >
+                        </div>
+
+
+                        <!-- <div class="form-group" style="width: 100%;">
+                                
+                                <label for="usr">Pega el enlace en la parte superior derecha en "Regenerar resultados" y da click en el botón para regenerar tus resultados</label>
+                                
+                                <div style="width: 100%; text-align: center; margin-top: 10px;">
+                                        <img src="images/refresh.png" class="img_link" style="margin: auto; border-radius: 5px;"> 	
+                                </div>
+                                
+                                
+                        </div> -->
+
+                        <button id="accept_link" class="btn btn-primary pull-right" type="button" >Aceptar</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 alwaysvisible">
+        
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  pull-left">
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 visibleItem anterior">
+                            <a id="ant_a" href="#" class="a_estatus">Anterior</a>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 visibleItem siguiente">
+        
+                            <a id="sig_a" href="#" class="a_estatus">Siguiente</a>
+                        </div>
+                    </div>
+                </div>-->
+
+
+
+
+        <div class="modalloading"><!-- Place at bottom of page --></div>
+
+
+        <script type="text/javascript" src="plugins/Bootstrap/popper.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+        <!-- // <script src="javascripts/leaflet/leaflet-src.js"></script> -->
+
+        <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
+        <!-- // <script src="plugins/sidebar/js/leaflet-sidebar.js"></script> -->
+        <!--<script src="plugins/sidebar/js/jquery-sidebar.js"></script>-->
+        <!--<script src="plugins/sidebar/js/leaflet-sidebar.js"></script>-->
+
+
+        <!-- <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script> -->
+        <!-- <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script> -->
+        <!-- <script src="dist/libs/jquery.js"></script> -->
+
+        <!-- En servidor -->
+        <script src="plugins/jstree/dist/jstree.min.js"></script>
+
+
+        <script type="text/javascript" src="plugins/crossfilter/crossfilter.min.js"></script>
+
+        <script src="plugins/BetterWMS/L.TileLayer.BetterWMS.js"></script>
+        <script type="text/javascript" src="plugins/toastr/toastr.js"></script>
+        <script type="text/javascript" src="plugins/i18n/in/jquery.i18n.properties.min.js"></script>
+        <script type="text/javascript" src="plugins/simpleStatistics/simple-statistics.js"></script>
+        <script type="text/javascript" src="plugins/de-array/d3-array.min.js"></script>
+
+        
+
+
+
+        <script type="text/javascript" src="javascripts/config.js"></script>
+        <script type="text/javascript" src="javascripts/pede_nicho.js"></script>
+        <script type="text/javascript" src="javascripts/map_module.js"></script>
+        <script type="text/javascript" src="javascripts/variable_module.js"></script>
+        <script type="text/javascript" src="javascripts/res_display_module.js"></script>
+        <script type="text/javascript" src="javascripts/region_module.js"></script> 
+        <script type="text/javascript" src="javascripts/validation_module.js"></script>
+        <script type="text/javascript" src="javascripts/histogram_module.js"></script> 
+        <script type="text/javascript" src="javascripts/table_module.js"></script> 
+        <script type="text/javascript" src="javascripts/utils_module.js"></script>
+        <script type="text/javascript" src="javascripts/language_module.js"></script> 
+        <script type="text/javascript" src="javascripts/toast_module.js"></script> 
+
+        <script type="text/javascript" src="plugins/easybutton/src/easy-button.js"></script>
+
+
+
+        <script type="text/javascript" src="https://rawgit.com/ricmoo/aes-js/master/index.js"></script>
+
+
+        <script src="plugins/markercluster/dist/leaflet.markercluster-src.js"></script>
+
+
+        <script src="http://www.sumbera.com/gist/js/vt/geojson-vt-dev.js"></script>
+        <script src="http://www.sumbera.com/gist/js/leaflet/canvas/L.CanvasTiles.js"></script>
+        <!-- <script src="http://www.sumbera.com/gist/data/CZDistricts.js"></script>  -->
+
+
+        <script src="http://www.sumbera.com/gist/js/leaflet/canvas/L.CanvasOverlay.js"></script>
+        <script>
+                                // -- module, require mockups so we can use orig files unmodified
+                                module = {};
+        </script>
+        <script src="http://www.sumbera.com/gist/js/earcut/earcut-1.4.2.js"></script>
+
+        <script type="text/javascript" src="plugins/js-cookie/js.cookie.js"></script> 
+
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="plugins/popupSlider/popup-slider.js"></script> 
+
+        <!--<script src="plugins/searchbox/leaflet.customsearchbox.min.js"></script>-->
+
+        <script src="plugins/ptjs/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="plugins/ptjs/js/ptjs.min.js"></script>
+
+        <script type="text/javascript" src="plugins/fullpage/jquery.fullPage.js"></script>
+
+        <script type="text/javascript" src="plugins/loading/jquery.loading.min.js"></script>
+
+        <script type="text/javascript" src="plugins/RequireJS/js/RequireJS.js"></script>
+
+        <script type="text/javascript" src="plugins/multiselect/js/bootstrap-multiselect.js"></script>
+
+        <!-- SCRIPT ERRORES NICHO CANDIDATE -->
+        <script type="text/javascript" src="https://ecoinformatica.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-wkgs00/b/49/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=8496dbeb"></script>
+
+
+        
+
+
+
+        <!-- <script src='https://unpkg.com/simple-statistics@6.1.1/dist/simple-statistics.min.js' /> -->
+
+
+
+        <!-- <script src="plugins/markercluster/src/MarkerCluster.js"></script>
+        // <script src="plugins/markercluster/src/MarkerClusterGroup.js"></script> -->
+
+
+        <!-- <a href="https://github.com/Turbo87/sidebar-v2/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Hecho en Conabio"></a> -->
+
+
+        <!-- <script type="text/javascript" src="bs_js/jquery.appear.js"></script>
+    <script type="text/javascript" src="bs_js/wow.min.js"></script>
+    <script type="text/javascript" src="bs_js/page-scroll.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.easypiechart.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.isotope.min.js"></script> 
+    <script type="text/javascript" src="bs_js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="bs_js/popup-gallery.js"></script>
+    <script type="text/javascript" src="bs_js/text-effect.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.revolution.js"></script>
+    <script type="text/javascript" src="bs_js/counter.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.countTo.js"></script>
+    <script type="text/javascript" src="bs_js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="bs_js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="bs_js/classie.js"></script>
+    <script type="text/javascript" src="bs_js/hamburger-menu.js"></script>
+    <script type="text/javascript" src="bs_js/main.js"></script> -->
+
+
+    </body>
+</html>
